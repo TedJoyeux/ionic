@@ -1,25 +1,24 @@
 <template>
-  <ion-page>
-      <ion-header>
-      <ion-toolbar>
-      <ion-title>TED Nigga</ion-title>
-      </ion-toolbar>
-      </ion-header>
-      <ion-content>
-          <h2>All star Game</h2>
-      </ion-content>
-  </ion-page>  
+  <base-layout page-title="All Memories">
+      <ion-list>
+        <ion-item router-link="/memories/1">Gentil</ion-item>
+        <ion-item>Kazungu</ion-item>
+        <ion-item>Bellard</ion-item>
+        <ion-item>Nella</ion-item>  
+      </ion-list>
+  </base-layout>
+ 
 </template>
 <script>
-import { IonPage,IonHeader,IonToolbar, IonTitle,IonContent } from'@ionic/vue';
+import { IonList, IonItem } from'@ionic/vue';
+import BaseLayout from '../components/BaseLayout.vue';
 
 export default ({
      components:{
-     IonPage,
-     IonHeader,
-     IonToolbar,
-     IonTitle,
-     IonContent 
+     IonList, 
+     IonItem,
+     BaseLayout
+
 
      }   
 
