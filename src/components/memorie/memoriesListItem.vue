@@ -1,5 +1,5 @@
 <template>
-   <ion-item  v-for="memory in memories" :router-link="`/memories/${memory.id}`" :key='memory.id'>
+   <ion-item :router-link="`/memories/${memory.id}`">
         <ion-thumbnail slot="start">
         <ion-img :src="memory.image"></ion-img>
         </ion-thumbnail>
@@ -9,10 +9,12 @@
         </ion-item> 
 </template>
 <script>
-import {IonItem, IonThumbnail , IonLabel} from '@ionic/vue'
+import {IonItem,IonImg, IonThumbnail , IonLabel} from '@ionic/vue'
 export default{
+    props:['memory'],
    components:{
        IonItem,
+       IonImg,
        IonThumbnail,
        IonLabel
    }
