@@ -1,5 +1,7 @@
 <template>
-    <base-layout page-title="Details" page-default-back-link="/memories">
+    <base-layout :page-title="loadedMemory ? loadedMemory.title:'loading..'" page-default-back-link="/memories">
+    <h2 v-if="!loadedMemory">could not find memory</h2>
+    <h2 v-else>Loaded..</h2>
     <h2>Ted Nigga</h2>
     </base-layout>
 </template>
@@ -7,7 +9,7 @@
 export default{
     data(){
      return{
-         memoryId: null,
+         memoryId: this.$route.params.id,
      }
     },
     computed:{
@@ -15,11 +17,11 @@ export default{
          return this.$store.getters.memory(this.memoryId);
      }
     },
-    watch:{
-        $route(currentRoute){
-          this.memoryId = currentRoute.parms.id;
-        }
-    }
+    // watch:{
+    //     $route(currentRoute){
+    //       this.memoryId = currentRoute.parms.id;
+    //     }
+    // }
 }
 
 </script>
