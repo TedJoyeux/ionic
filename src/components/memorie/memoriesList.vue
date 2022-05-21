@@ -1,9 +1,9 @@
 <template>
     <ion-list>
-     <memory-list-item  v-for="memory in memories" 
+     <memories-list-item  v-for="memory in memories" 
      :key='memory.id'
      :memory="memory"
-     ></memory-list-item>   
+     ></memories-list-item>   
     </ion-list>
 </template>
 <script>
