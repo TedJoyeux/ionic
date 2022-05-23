@@ -13,7 +13,7 @@
       <ion-label position="floating">Description</ion-label>
       <ion-textarea rows="5" v-model="entereddescription"></ion-textarea>
     </ion-item> 
-     <ion-button type="submit" expand="full" @save-memory="saveMemory">Save</ion-button>
+     <ion-button type="submit" expand="full">Save</ion-button>
   </ion-list>
   </form>
 </template>
@@ -37,6 +37,7 @@ export default {
           entereddescription:'',
       }
   },
+  methods:{
   submitForm(){
       const memoryData = {
           title:this.enteredTitle,
@@ -44,6 +45,8 @@ export default {
           description:this.entereddescription,
       };
       this.$emit('save-memory', memoryData);
+      this.$router.replace('/memories');
+  }
   }
 }
 </script>
