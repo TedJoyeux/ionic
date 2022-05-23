@@ -8,6 +8,9 @@ import CreateMemory from '../components/memorie/CreateMemory.vue'
 export default{
   components :{
   CreateMemory
+  },
+  saveMemory(memoryData){
+    this.$store.dispatch('AddMemory', memoryData);
   }
 
 }
