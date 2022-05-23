@@ -1,6 +1,6 @@
 <template>
   <base-layout page-title=" Add Memory" page-default-back-link="/memories">
-    <create-memory></create-memory>
+    <create-memory @save-memory="saveMemory"></create-memory>
   </base-layout> 
 </template>
 <script>
