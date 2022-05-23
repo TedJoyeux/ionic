@@ -11,7 +11,6 @@ export default{
   },
   saveMemory(memoryData){
     this.$store.dispatch('AddMemory', memoryData);
-    this.$route.replace('/memories');
   }
 
 }
