@@ -9,8 +9,10 @@ export default{
   components :{
   CreateMemory
   },
+  methods :{
   saveMemory(memoryData){
     this.$store.dispatch('AddMemory', memoryData);
+  }
   }
 
 }
